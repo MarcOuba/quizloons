@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./hitTheLoons.css" />
+    <script src='https://kit.fontawesome.com/4eec39abce.js' crossorigin='anonymous'></script>
+    <meta name="description" content="Login Page, pop the balloons game and quiz app">
+    <meta name="keywords" content="Quiz App Balloons pop games ">
+    <meta name="author" content="Marc Ouba">
+    <link rel="shortcut icon" href="./fav-icon.png" />
+    <title>Quizloons</title>
+    
+        
+</head>
+<body id="hitTheLoons">
+    <button class="back">Back</button>
+    <div class="navbar-loons-container">
+    <i class="fa fa-clock"></i><p id="time"></p>
+    <progress value="0" max="20" id="progressBar"></progress>
+    <p id="score-text">Score : </p>
+    <p id="score">  0</p>
+    </div>
+
+    <div class="instructions-container">
+<ul class="instructions-list"><h2><strong>Instructions:</strong></h2>
+    <li>A series of balloons will go on the screen from the bottom to top, click on the balloon to pop it.</li>
+    <li> Each pop is worth 1 point.</li>
+    <li> You have 20 seconds for each level,but a different amount of required and available balloons for each one.</li>
+    <li>Click gently on the balloons or it will be considered a drag (No score)</li>
+  <li>  You cannot proceed to the next level Until you beat the previous one.</li>
+  <p> Can you beat them all? </p>
+    </ul>
+<ul class="level-list">
+    <li><button class="levels" id="level1">Level 1:</button>            <p>Required score: 15</p></li>
+    <li><button class="levels" id="level2" disabled>Level 2:</button>   <p>Required score: 20</p></li>
+    <li><button class="levels" id="level3" disabled>Level 3:</button>   <p>Required score: 25</p></li>
+    <li><button class="levels" id="level4" disabled>Level 4:</button>   <p>Required score: 30</p></li>
+    <li><button class="levels" id="level5" disabled>Level 5:</button>   <p>Required score: 35</p></li>
+    <li><button class="levels" id="level6" disabled>Level 6:</button>   <p>Required score: 40</p></li>
+</ul>
+
+
+
+    </div>
+    <div id="congratulations">
+    <p >Congratulations!!!</p>
+</div>
+    <div id="youCanDoIt">
+<p class="youCanDoIt">You can do It!!</p>
+<button class="tryAgain"> Try Again</button>
+</div>
+    <div id="balloon-container">
+       
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./hitTheLoons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="confetti.js"></script>
+</body>
+
+</html>

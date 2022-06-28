@@ -1,0 +1,395 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+@keyframes animate_color {
+    0%   {color:red;}
+    25%{color:rgb(76, 14, 86)}
+    50%  {color:green;}
+    75%{color:rgba(255, 153, 1, 0.985);}
+    100% {color:blue;}
+}
+
+@keyframes animate_background {
+    0%   {background-color:blue;}
+    25%{background-color:rgba(255, 153, 1, 0.985)}
+    50%  {background-color:green;}
+    75%{background-color:rgb(76, 14, 86);}
+    100% {background-color:red;}
+}
+
+
+
+/* HIT LOONS game Page ////////////////////////////////////////////////////////   */
+    
+#hitTheLoons{
+     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: url(white-background.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  font-size: 18px;
+   
+}
+
+#balloon-container {
+    height: 80vh;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+    cursor:grabbing;
+  }
+  
+  .balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .balloon:after {
+      content: "▲";
+      text-align: center;
+      display: block;
+      position: absolute;
+      color: inherit;
+      top: 120px;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  
+  @keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+  }
+  
+
+  .navbar-loons-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      font-weight: bold;
+      padding-left: 10px;
+      border-bottom: 4px dotted black;
+  }
+  
+  #progressBar{
+margin-right:200px;
+  }
+  .back{
+      height:50px;
+      width:200px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      background-color: #800000;
+      color:white;
+      position: relative;
+      top:85px;
+      left:10px;
+      cursor: pointer;
+  }
+.back:hover{
+    background-color: green;
+}
+  #time{
+      margin-right:20px;
+  }
+  .instructions-list{
+      font-size: 1.1em;
+      font-weight:600;
+      line-height: 50px;
+      
+  }
+
+  .fa{
+    position: relative;
+    font-size:30px;
+    margin: 10px;
+}
+  #congratulations{
+      
+    box-sizing: border-box;   
+    animation: animate_background 4s infinite,animate_color 1s infinite;  
+    width:50%;
+    height:200px;
+    text-align: center;
+    margin:auto;
+    padding-top:50px;
+    font-size:2rem;
+    border-radius: 20px;
+    display:none;
+    margin-top:100px;
+     
+  }
+
+  #youCanDoIt{
+     
+     margin: auto;
+     margin-top: 100px;
+     background-color: #800000;
+     padding: 20px;
+     font-size: 2rem;
+     animation:animate_color 2s infinite;
+     border-radius: 50%;
+     height:400px;
+     width:400px;
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     display: none;
+  }
+  .tryAgain{
+      background-color: greenyellow;
+      height:50px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1.3rem;
+         color:purple;
+  }
+  .tryAgain:hover{
+      background-color: green;
+  }
+
+  
+
+.levels {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+  margin-top:20px;
+}
+
+.levels:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.levels:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.levels:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+
+
+
+
+
+.level-list>li>p{
+    font-weight: bold;
+    display: inline;
+    margin-left:20px;
+    font-size: 1.4rem;
+   
+    
+}
+.level-list{
+    list-style-type: none;
+}
+
+
+/* MEDIA QUERIES FOR HIT LOONS game Page ////////////////////////////////////////////////////////   */
+
+@media only screen and (max-width:1260px) {
+    .back{
+       top:20px;
+       height:40px;
+       font-size: 1rem;
+       width:100px;
+
+    }
+    .navbar-loons-container{
+      margin-top: -40px;
+      padding-bottom: 20px;
+      font-size:1.4rem;
+    }
+    
+}
+
+@media only screen and (max-width:840px) {
+    .back{
+       top:35px;
+       height:30px;
+       font-size: 1rem;
+       width:100px;
+
+    }
+    .navbar-loons-container{
+          margin-top: -40px;
+          padding-bottom: 20px;
+          font-size:1rem;
+        }
+    #progressBar{
+        margin-right:50px;
+          }
+    .instructions-list{
+        font-size: 1rem;
+    }
+    #congratulations{
+        width:50%;
+        font-size:1.2rem;
+    }
+    
+    
+}
+@media only screen and (max-width:450px) {
+    .back{
+       top:35px;
+    left:40%;
+       height:30px;
+       font-size: 1rem;
+       width:100px;
+
+    }
+    .instructions-list{
+        font-size: 0.8rem;
+    }
+    .navbar-loons-container{
+        display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2em;
+          font-weight: bold;
+          padding-left: 10px;
+          border-bottom: 4px dotted black;
+          margin-top: -40px;
+          padding-bottom: 20px;
+          font-size:1rem;
+        }
+    #progressBar{
+        margin-right:10px;
+          }
+          #youCanDoIt{
+              font-size: 1rem;
+              height: 200px;
+              width:200px;
+          }
+          .fa-clock{
+              font-size: 1.5rem;
+          }
+          #time{
+              margin-right: 10px;
+          }
+          .level-list>li>p{
+            font-weight: bold;
+            display: inline;
+            margin-left:20px;
+            font-size: 1rem;
+           
+            
+        }
+        #congratulations{
+            width:50%;
+            font-size:1.2rem;
+        }
+    
+    
+}
+@media only screen and (max-width:315px) {
+    
+    .level-list>li>p{
+        font-weight: bold;
+        display: inline;
+        margin-left:20px;
+        font-size: 0.8rem;      
+        
+    }
+    .levels{
+        margin-left: -20px;
+       
+    }
+
+    .navbar-loons-container{
+        display: block;
+    }
+    #progressBar{
+        position: relative;
+        display: inline;
+        float: right;
+        top:-45px;
+        left:0px;
+    }
+    #score{
+        display: inline;
+        position:relative;
+        top:15.5px;
+        left:180px;
+        
+       
+    }
+    #time{
+        position: relative;
+        left:60px;
+        font-size: 1.3rem;
+    }
+    .fa-clock{
+        position: relative;
+        display: inline;
+        top:50px;
+    }
+    .back{
+        position: relative;
+        top:90px;
+        left:0px;
+    }
+    #congratulations{
+        width:80%;
+        font-size:1.2rem;
+    }
+    #score-text{
+        position: relative;
+        top:55px;
+        left:120px;
+    }
+    
+    
+}

@@ -1,0 +1,283 @@
+ 
+ /* THIS FILE CONTAINS LOGIN AND CHOOSE GAME PAGES  ///////////////////////// */
+ 
+ /*ELEMENT USED IN THE WHOLE WEBPAGE/////////////////////// */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+@keyframes animate_color {
+    0%   {color:red;}
+    25%{color:rgb(76, 14, 86)}
+    50%  {color:green;}
+    75%{color:rgba(255, 153, 1, 0.985);}
+    100% {color:blue;}
+}
+
+@keyframes animate_background {
+    0%   {background-color:blue;}
+    25%{background-color:rgba(255, 153, 1, 0.985)}
+    50%  {background-color:green;}
+    75%{background-color:rgb(76, 14, 86);}
+    100% {background-color:red;}
+}
+
+/* Login Page ////////////////////////////////////////////////////////   */
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: url('redandblack.jpeg') no-repeat center fixed;     
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-size:16px;
+    
+}
+
+.login-input:focus { 
+    outline: none !important;
+    border-color: black;
+    box-shadow: 0 0 10px #5b427d;
+}
+
+
+
+.welcome-tag{
+    text-align: center;
+    border-bottom: 5px dotted rgb(15, 14, 14);
+    color:rgba(255, 153, 1, 0.985);
+    text-shadow: 0px 0px 20px #00eeff;
+    padding-bottom: 20px;
+    display:none;
+    animation: animate_color 5s;
+    animation-iteration-count: infinite;
+}
+.login-input{
+    background-color: rgb(15, 14, 14);
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgb(255, 0, 0);
+    margin-left: 10px;
+position: relative;
+top:-5px;
+}
+.login-input:focus{
+  background-color: none;
+  border: 2px solid red;
+}
+.fa{
+    position: relative;
+    font-size:20px;
+    margin: 10px;
+    
+  
+}
+
+.form-container{
+   
+    background-color: rgb(15, 14, 14);
+    color:rgba(255, 255, 255, 0.811);
+    width:500px;
+    margin: auto;
+    border-radius: 20px;
+    display: none;
+
+
+}
+form > h2{
+    font-size: 1.2rem;
+} 
+
+
+.login{
+    width:250px;
+    height: 40px;
+    margin-bottom: 40px;
+    margin-top:20px;
+    background-color: rgb(15, 14, 14);
+   margin-left:-12px;
+    border: 2px dotted white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(96, 5, 167);
+    border-radius: 10px;
+}
+.login:hover{
+    background-color: rgb(96, 5, 167);
+    color:rgb(15, 14, 14);
+    border: none;
+}
+
+footer{
+    position: relative;
+    bottom: -160px;
+    padding: 10px 0px;
+  background: linear-gradient(to bottom, #000000 50%, #800000 100%);
+    height: 100px;
+    display: inline-flex;
+    width: 100%;
+    border-top: 2px solid white;
+    display: none;
+  }
+  .footer-text{
+  color:white;
+  margin-left: 30px;
+  margin-right: 200px;
+  padding-top:40px;
+  }
+  .fa-facebook,.fa-instagram,.fa-linkedin{
+    
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 25px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  .fa-facebook{
+    
+    background: linear-gradient(to top, #000000 50%, #800000 100%);
+    color: white;
+  }
+  .fa-instagram{
+    background: linear-gradient(to top, #000000 50%, #800000 100%);
+    color: white;
+  }
+  .fa-linkedin {
+    background: linear-gradient(to top, #000000 50%, #800000 100%);
+    color: white;
+  }
+/*MEDIA QUERIES FOR LOGIN /////////////////////////////////// */ 
+
+  @media only screen and (max-width:1200px) {
+   
+  .footer-text{
+    color:white;
+    margin-left: 30px;
+    margin-right: 100px;
+    padding-top:40px;
+    }
+}
+@media only screen and (max-width:840px) {
+   footer{
+       display: flex !important;
+       justify-content: center;
+       align-items: center;
+   }
+   .fa-facebook , .fa-instagram,.fa-linkedin{
+    
+    padding: 10px;
+    font-size: 25px;
+    margin: 0px 15px;
+    margin-top: 20px;
+    position: relative;
+    left:0px;
+    top:10px;
+  }
+  .footer-text{
+      
+      text-align:center;
+      top: -50px;
+      left:0px;
+      margin:0;
+  }
+    
+ }
+
+@media only screen and (max-width:750px) {
+    .welcome-tag{
+        font-size:1.5rem;
+    }
+    .form-container{
+        margin:auto;
+        width:400px;
+    }
+}
+
+
+
+@media only screen and (max-width:560px) {
+    .welcome-tag{
+        font-size:1.3rem;
+    }
+   
+    .form-container{
+        
+       width:90%;
+    }
+    .login{
+        width:150px;
+        margin-left: 40px;
+    }
+    #login-tag{
+font-size: 1rem;
+margin-left:25px;
+    }
+}
+@media only screen and (max-width:395px) {
+    .welcome-tag{
+        font-size:0.9rem;
+    }
+    .error{
+        margin-left:30px !important; 
+    }
+    footer{
+       height: 140px;
+    }
+     
+}
+
+
+
+/* Choose game Page ////////////////////////////////////////////////////////   */
+
+.choose-game-h1{
+    text-align: center;
+    animation: animate_color 1s infinite;
+    border-bottom: 5px dotted rgb(15, 14, 14);
+    padding-bottom: 30px;
+    
+}
+#button-container{
+    display: block;
+    text-align: center;
+}
+.game{
+    position: relative;
+    height:100px;
+    width:50%;
+    font-size: 2em;
+    border-radius: 10px;
+    margin-top:100px;
+    cursor: pointer;
+    background-color:transparent;
+    animation: animate_background 4s infinite;
+    border:2px dotted white;
+    color:wheat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
